@@ -1,22 +1,18 @@
-# Publicação futura — sem implantação agora
+# Publicação no GitHub Pages
 
-Em 01/10/2026 a equipe pediu para manter o aplicativo apenas na `feature`. A CI valida e guarda `dist/` como artefato; não tem deploy ou permissão de publicação.
+A aplicação está configurada para publicação automática no GitHub Pages com o workflow `.github/workflows/pages.yml`.
 
-## Caminho previsto
+## Como funciona
 
-GitHub Pages, sem backend/chaves de API. `base` do Vite já é `/grade-horaria-automatizada/`. Pages permite repositórios públicos no GitHub Free ([documentação](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)).
+1. Push na `main` dispara o workflow de deploy.
+2. O pipeline executa `npm ci`, `npm run lint`, `npm test` e `npm run build`.
+3. O conteúdo de `dist/` é enviado com `upload-pages-artifact`.
+4. A publicação é concluída com `deploy-pages` no ambiente `github-pages`.
 
-Quando autorizado:
+URL publicada: `https://herick721.github.io/grade-horaria-automatizada/`.
 
-1. Administrador: **Settings → Pages → Build and deployment → Source → GitHub Actions**.
-2. Acrescentar workflow Pages com os mesmos testes/build, envio de `dist/` por `upload-pages-artifact` e publicação por `deploy-pages` ([instruções oficiais](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)).
-3. Definir branch publicada e autorizá-la no ambiente `github-pages`; não fazer merge só para contornar permissões.
-4. Testar site, dados, Web Worker, exemplo/bloqueio e então incluir link no README/Relatório.
+## Pré-requisitos
 
-Endereço esperado, **ainda não ativo/verificado**: `https://ribeirore.github.io/grade-horaria-automatizada/`.
-
-Em outra hospedagem estática, ajustar `base` conforme o subdiretório e publicar `dist/`. Não enviar só `src/` nem esquecer `dist/data/offering.json`.
-
-## Credenciais
-
-Autenticação Git existente permite push; consulta não mostrou acesso administrativo. Não compartilhar senha/token em chat, documentos ou commits. Usar login seguro do GitHub/Git Credential Manager no computador; configuração Pages pode ser feita pelo dono.
+- Em **Settings → Pages**, manter **Build and deployment → Source → GitHub Actions**.
+- Repositório público (ou plano compatível com Pages privado).
+- `base` do Vite definido como `/grade-horaria-automatizada/` (já configurado em `vite.config.ts`).
