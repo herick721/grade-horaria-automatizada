@@ -2,7 +2,7 @@
 
 Assistente de horários para o Case 3 do LIA Impact Lab (PUC-Rio). Escolha disciplinas, bloqueie compromissos e compare grades válidas ordenadas pelas suas preferências. Uma turma entra sempre por inteiro, com todos os encontros semanais.
 
-**Estado em 01/10/2026:** aplicação implementada na branch `feature`, com testes locais. Sem hospedagem neste momento, por decisão da equipe. Não houve merge na `main`.
+**Estado em 02/10/2026:** aplicação publicada no GitHub Pages via workflow dedicado e validação em CI.
 
 ## Executar
 
@@ -25,7 +25,9 @@ npm run build
 npm run preview
 ```
 
-`dist/` contém o aplicativo estático pronto para futura publicação. O workflow de CI executa lint, testes e build; **não publica o site**. Para experimentar rapidamente, clique em **Experimentar um exemplo**.
+`dist/` contém o aplicativo estático publicado no GitHub Pages. O workflow de CI executa lint, testes e build; o workflow de Pages publica o site a cada push na `main`. Para experimentar rapidamente, clique em **Experimentar um exemplo**.
+
+Site: <https://herick721.github.io/grade-horaria-automatizada/>
 
 ## Funcionalidades
 
@@ -101,6 +103,6 @@ Não efetiva matrícula, verifica vagas, pré-requisitos, histórico, elegibilid
 - [AI Log](docs/AI_LOG.md), decisões e erros realmente encontrados.
 - [Relatório Final](docs/RELATORIO_FINAL.md), sete respostas e pendências.
 - [Validação](docs/VALIDACAO.md), evidências e limites dos testes.
-- [Publicação futura](docs/PUBLICACAO.md), caminho gratuito sem implantação automática.
+- [Publicação](docs/PUBLICACAO.md), configuração do deploy no GitHub Pages.
 
-Pendências do hackathon: revisão humana, nomes/registro, confirmação sobre Claude, hospedagem quando autorizada e vídeo de até dois minutos. **Não afirmamos que essas etapas já foram concluídas.**
+Pendências do hackathon: revisão humana, nomes/registro, confirmação sobre Claude e vídeo de até dois minutos. **Não afirmamos que essas etapas já foram concluídas.**
