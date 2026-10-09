@@ -9,7 +9,7 @@ Assistente de horários para o Case 3 do LIA Impact Lab (PUC-Rio). Escolha disci
 Requisitos: Node.js **22.12+** e npm. Nenhuma chave de API, senha, banco de dados ou serviço pago é necessária.
 
 ```bash
-git clone https://github.com/ribeirore/grade-horaria-automatizada.git
+git clone https://github.com/herick721/grade-horaria-automatizada.git
 cd grade-horaria-automatizada
 git switch feature
 npm ci
