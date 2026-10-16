@@ -105,4 +105,3 @@ Não efetiva matrícula, verifica vagas, pré-requisitos, histórico, elegibilid
 - [Validação](docs/VALIDACAO.md), evidências e limites dos testes.
 - [Publicação](docs/PUBLICACAO.md), configuração do deploy no GitHub Pages.
 
-Pendências do hackathon: revisão humana, nomes/registro, confirmação sobre Claude e vídeo de até dois minutos. **Não afirmamos que essas etapas já foram concluídas.**
